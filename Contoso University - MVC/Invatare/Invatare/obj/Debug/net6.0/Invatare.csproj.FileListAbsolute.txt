@@ -1,0 +1,15 @@
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\bin\Debug\net6.0\Invatare.exe
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\bin\Debug\net6.0\Invatare.deps.json
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\bin\Debug\net6.0\Invatare.runtimeconfig.json
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\bin\Debug\net6.0\Invatare.dll
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\bin\Debug\net6.0\Invatare.pdb
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\Invatare.csproj.AssemblyReference.cache
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\Invatare.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\Invatare.AssemblyInfoInputs.cache
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\Invatare.AssemblyInfo.cs
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\Invatare.csproj.CoreCompileInputs.cache
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\Invatare.dll
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\refint\Invatare.dll
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\Invatare.pdb
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\Invatare.genruntimeconfig.cache
+C:\Dragos Visual Studio Projects\Contoso University - MVC\Invatare\Invatare\obj\Debug\net6.0\ref\Invatare.dll
