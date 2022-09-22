@@ -19,17 +19,7 @@ namespace ContosoUniversity.Pages.Students
             _context = context;
         }
 
-        public IActionResult OnGet()
-        {
-            // For easy testing.
-            Student = new Student
-            {
-                FirstName = "Joe",
-                EnrollmentDate = DateTime.Now,
-                LastName = "Smith"
-            };
-            return Page();
-        }
+       
 
         [BindProperty]
         public Student Student { get; set; }
