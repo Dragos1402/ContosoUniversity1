@@ -31,7 +31,7 @@ namespace ContosoUniversity.Models
         {
             get { return LastName + ", " + FirstName; }
         }
-        //[ValidateNever]
+        [ValidateNever]
         public ICollection<Course> Courses { get; set; }
         [ValidateNever]
         public OfficeAssignment OfficeAssignment { get; set; }

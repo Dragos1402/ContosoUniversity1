@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -24,7 +25,13 @@ namespace ContosoUniversity.Models
 
         public int? InstructorID { get; set; }
 
+        [Timestamp]
+        public byte[] ConcurrencyToken { get; set; }
+
+        [ValidateNever]
         public Instructor Administrator { get; set; }
+        [ValidateNever]
+       
         public ICollection<Course> Courses { get; set; }
     }
 }
