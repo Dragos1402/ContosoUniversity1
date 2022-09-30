@@ -1,0 +1,7 @@
+C:\Dragos Visual Studio Projects\ConnectionButton\ConnectionButton\obj\Debug\net6.0-windows\ConnectionButton.csproj.AssemblyReference.cache
+C:\Dragos Visual Studio Projects\ConnectionButton\ConnectionButton\obj\Debug\net6.0-windows\ConnectionButton.Form1.resources
+C:\Dragos Visual Studio Projects\ConnectionButton\ConnectionButton\obj\Debug\net6.0-windows\ConnectionButton.csproj.GenerateResource.cache
+C:\Dragos Visual Studio Projects\ConnectionButton\ConnectionButton\obj\Debug\net6.0-windows\ConnectionButton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dragos Visual Studio Projects\ConnectionButton\ConnectionButton\obj\Debug\net6.0-windows\ConnectionButton.AssemblyInfoInputs.cache
+C:\Dragos Visual Studio Projects\ConnectionButton\ConnectionButton\obj\Debug\net6.0-windows\ConnectionButton.AssemblyInfo.cs
+C:\Dragos Visual Studio Projects\ConnectionButton\ConnectionButton\obj\Debug\net6.0-windows\ConnectionButton.csproj.CoreCompileInputs.cache

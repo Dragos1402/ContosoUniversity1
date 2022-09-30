@@ -19,13 +19,13 @@ namespace ContosoUniversity.Models
 
         public int DepartmentID { get; set; }
 
-        [ValidateNever]
+         
         public Department Department { get; set; }
 
-        [ValidateNever]
+         
         public ICollection<Enrollment> Enrollments { get; set; }
 
-        [ValidateNever]
+         
 
         public ICollection<Instructor> Instructors { get; set; }
     }

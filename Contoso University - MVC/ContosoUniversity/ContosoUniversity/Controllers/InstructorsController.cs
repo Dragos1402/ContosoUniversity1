@@ -25,17 +25,17 @@ namespace ContosoUniversity.Controllers
         {
             var viewModel = new InstructorIndexData();
             viewModel.Instructors = await _context.Instructors
-                .Include(o => o.OfficeAssignment)
-                .Include(i => i.CourseAssignments)
-                .ThenInclude(c => c.Course)
-                .ThenInclude(e => e.Enrollments)
-                .ThenInclude(s => s.Student)
-                .Include(i => i.CourseAssignments)
-                .ThenInclude(c => c.Course)
-                .ThenInclude(d => d.Department)
-                .AsNoTracking()
-                .OrderBy(i => i.LastName)
-                .ToListAsync();
+                  .Include(i => i.OfficeAssignment)
+                  .Include(i => i.CourseAssignments)
+                    .ThenInclude(i => i.Course)
+                        .ThenInclude(i => i.Enrollments)
+                            .ThenInclude(i => i.Student)
+                  .Include(i => i.CourseAssignments)
+                    .ThenInclude(i => i.Course)
+                        .ThenInclude(i => i.Department)
+                  .AsNoTracking()
+                  .OrderBy(i => i.LastName)
+                  .ToListAsync();
 
             if (id != null)
             {
@@ -44,12 +44,18 @@ namespace ContosoUniversity.Controllers
                     i => i.ID == id.Value).Single();
                 viewModel.Courses = instructor.CourseAssignments.Select(s => s.Course);
             }
+
             if (courseID != null)
             {
-                ViewData["CourseID"] = id.Value;
-                viewModel.Enrollments = viewModel.Courses.Where(
-                    x => x.CourseID == courseID).Single().Enrollments;
+                ViewData["CourseID"] = courseID.Value;
+                var selectedCourse = viewModel.Courses.Where(c => c.CourseID == courseID).Single();
+                foreach (Enrollment enrollment in selectedCourse.Enrollments)
+                {
+                    await _context.Entry(enrollment).Reference(x => x.Student).LoadAsync();
+                }
+                viewModel.Enrollments = selectedCourse.Enrollments;
             }
+
             return View(viewModel);
         }
         // GET: Instructors/Details/5
@@ -83,11 +89,18 @@ namespace ContosoUniversity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,LastName,FirstMidName,HireDate")] Instructor instructor)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(instructor);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(instructor);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
             }
             return View(instructor);
         }

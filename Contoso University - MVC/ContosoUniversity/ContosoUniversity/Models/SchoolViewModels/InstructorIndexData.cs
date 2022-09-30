@@ -1,8 +1,10 @@
-﻿namespace ContosoUniversity.Models.SchoolViewModels
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+
+namespace ContosoUniversity.Models.SchoolViewModels
 {
     public class InstructorIndexData
     {
-      public  IEnumerable<Instructor> Instructors { get; set; }  // cu IEnumerable stochez datele ce apartin entitatilor dorite intr-o variabila 
+      public  IEnumerable<Instructor> Instructors { get; set; }
         public IEnumerable<Course> Courses { get; set; }
         public IEnumerable<Enrollment> Enrollments { get; set; }
     }

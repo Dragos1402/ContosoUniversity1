@@ -28,9 +28,9 @@ namespace ContosoUniversity.Models
         [Timestamp]
         public byte[] ConcurrencyToken { get; set; }
 
-        [ValidateNever]
+         
         public Instructor Administrator { get; set; }
-        [ValidateNever]
+         
        
         public ICollection<Course> Courses { get; set; }
     }

@@ -2,6 +2,7 @@
 using ContosoUniversity.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -74,7 +75,7 @@ namespace ContosoUniversity.Pages.Instructors
                     await _context.SaveChangesAsync();
                     return RedirectToPage("./Index");
                 }
-                return RedirectToPage("./Index");
+                return Page();
             }
             catch (Exception ex)
             {

@@ -10,6 +10,8 @@ using ContosoUniversity.Models;
 
 namespace ContosoUniversity.Controllers
 {
+
+
     public class CoursesController : Controller
     {
         private readonly SchoolContext _context;
@@ -43,7 +45,7 @@ namespace ContosoUniversity.Controllers
                 return NotFound();
             }
 
-            return View(course);
+            return Ok(course);
         }
 
         // GET: Courses/Create

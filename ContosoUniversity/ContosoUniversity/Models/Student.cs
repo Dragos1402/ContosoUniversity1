@@ -32,7 +32,7 @@ namespace ContosoUniversity.Models
                 return LastName + ", " + FirstName;
             }
         }
-        [ValidateNever]
+         
         public ICollection<Enrollment> Enrollments { get; set; }
     }
 }
