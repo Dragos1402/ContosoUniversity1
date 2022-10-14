@@ -37,7 +37,6 @@ namespace ContosoUniversity.Pages.Courses
                 _context.Courses.AddAsync(emptyCourse);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");
-
             }
             PopulateDepartmentsDropDownList(_context, emptyCourse.DepartmentID);
             return Page();

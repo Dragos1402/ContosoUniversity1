@@ -1,31 +1,23 @@
 ﻿using ContosoUniversityAPI.Models;
-using Microsoft.AspNetCore.Cors;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Reflection;
 using System.Web.Http;
-using System.Data;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Microsoft.Ajax.Utilities;
 using ContosoUniversityAPI.Services;
-using System.Web.Http.Results;
+using ContosoUniversityAPI.HelperClasses;
+using System.Web.Http.Cors;
 
 namespace ContosoUniversity.APIControllers
 {
     [RoutePrefix("services")]
-   // [EnableCors(origins: "*", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class StudentController : ApiController
     {
         IStudentServ _studentServ;
         public StudentController(IStudentServ studentServ)
         {
-
             _studentServ=studentServ;
         }
         [HttpGet]
@@ -64,10 +56,33 @@ namespace ContosoUniversity.APIControllers
             resp.Content = new StringContent(CreateJSON(result), System.Text.Encoding.UTF8, "application/json");
             return resp;
         }
+        [HttpPost]
+        [Route("add_student")]
+        public HttpResponseMessage AddStudent(AddStudent student)
+        {
+            string currentMethodName = MethodBase.GetCurrentMethod().Name;
+            Response response = new Response();
+            try
+            {
+
+                string result = _studentServ.AddStudent(student);
+                if (result == Globals.SUCCESS)
+                {
+                    string json = JsonConvert.SerializeObject(response.data);
+                }
+                response.SetResponse(result, currentMethodName);
+
+            }
+            catch (Exception)
+            {
+            }
+            var resp = Request.CreateResponse();
+            resp.Content = new StringContent(Globals.CreateJSON(response), System.Text.Encoding.UTF8, "application/json");
+            return resp;
+        }
         public static String CreateJSON(object item)
         {
             return JsonConvert.SerializeObject(item);
         }
     }
 }
-

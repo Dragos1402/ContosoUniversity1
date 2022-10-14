@@ -13,5 +13,8 @@ namespace ContosoUniversityAPI.Services
         List<StudentList> Students { get; set; }
         List<StudentList> GetStudents();
         Student GetStudentByID(int id);
+        string AddStudent(AddStudent student);
+        //string UpdateStudent(Student student);
+
     }
 }

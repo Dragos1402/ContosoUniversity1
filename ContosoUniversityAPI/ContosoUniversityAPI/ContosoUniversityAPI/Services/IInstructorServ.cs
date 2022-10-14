@@ -11,6 +11,10 @@ namespace ContosoUniversityAPI.Services
     {
        List<InstructorCount> Instructors { get; set; }
        List<InstructorCount> GetInstructors();
-        Instructor GetInstructorID(int id);
+        InstructorCount GetInstructorID(int id);
+        string AddInstructor(InstructorSimplu instructorSimplu);
+        string UpdateInstructor(InstructorSimplu instructorSimplu, int id);
+        string DeleteInstructor( int id);
+
     }
 }

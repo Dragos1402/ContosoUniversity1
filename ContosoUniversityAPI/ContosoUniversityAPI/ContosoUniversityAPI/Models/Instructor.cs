@@ -20,6 +20,7 @@ namespace ContosoUniversityAPI.Models
             OfficeAssignment = new OfficeAssignment();
             Courses = new List<Course>();
         }
+        
     }
     public class InstructorCount
     {
@@ -30,4 +31,12 @@ namespace ContosoUniversityAPI.Models
         public int TotalDepartments { get; set; }
         public int TotalCourses { get; set; }
     }
+    public class InstructorSimplu
+    {
+        public int ID { get; set; }
+        public string LastName { get; set; }
+        public string FirstMidName { get; set; }
+        public DateTime HireDate { get; set; }
+    }
+
 }

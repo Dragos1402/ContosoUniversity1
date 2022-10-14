@@ -29,4 +29,12 @@ namespace ContosoUniversityAPI.Models
         public int InstructorID { get; set; }
         public int TotalCourses { get; set; }
     }
+    public class AddDepartment
+    {
+        public int DepartmentID { get; set; }
+        public string Name { get; set; }
+        public int Budget { get; set; }
+        public DateTime StartDate { get; set; }
+        public int InstructorID { get; set; }
+    }
 }

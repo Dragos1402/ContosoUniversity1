@@ -9,8 +9,10 @@ namespace ContosoUniversityAPI.Services
 {
    public interface IDepartmentServ
     {
-       List<DepartmentCount> Departments { get; set; }
-        List<DepartmentCount> GetDepartments();
+        List<Department> Departments { get; set; }
+        List<Department> GetDepartments();
         DepartmentCount GetDepartmentID(int id);
+        string AddDepartment(AddDepartment department);
+        string UpdateDepartment(AddDepartment updateDepartment, int id);
     }
 }

@@ -12,5 +12,10 @@ namespace ContosoUniversityAPI.Services
          List<Course> Courses { get; set; }
 
          List<Course> GetCourses();
+
+        List<CourseOnly> GetCourseID(int id);
+        string AddCourse(AddCourse course);
+        string UpdateCourse(AddCourse course, int id);
+
     }
 }

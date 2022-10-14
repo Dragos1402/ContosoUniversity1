@@ -130,3 +130,6 @@ C:\Dragos Visual Studio Projects\ContosoUniversityAPI\ContosoUniversityAPI\Conto
 C:\Dragos Visual Studio Projects\ContosoUniversityAPI\ContosoUniversityAPI\ContosoUniversityAPI\bin\Autofac.Integration.WebApi.pdb
 C:\Dragos Visual Studio Projects\ContosoUniversityAPI\ContosoUniversityAPI\ContosoUniversityAPI\bin\Dapper.dll
 C:\Dragos Visual Studio Projects\ContosoUniversityAPI\ContosoUniversityAPI\ContosoUniversityAPI\bin\Dapper.xml
+C:\Dragos Visual Studio Projects\ContosoUniversityAPI\ContosoUniversityAPI\ContosoUniversityAPI\bin\System.Web.Cors.dll
+C:\Dragos Visual Studio Projects\ContosoUniversityAPI\ContosoUniversityAPI\ContosoUniversityAPI\bin\System.Web.Http.Cors.dll
+C:\Dragos Visual Studio Projects\ContosoUniversityAPI\ContosoUniversityAPI\ContosoUniversityAPI\bin\System.Web.Http.Cors.xml

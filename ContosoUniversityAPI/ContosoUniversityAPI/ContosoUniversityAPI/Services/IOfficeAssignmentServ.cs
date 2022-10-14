@@ -11,6 +11,9 @@ namespace ContosoUniversityAPI.Services
     public interface IOfficeAssignmentServ
     {
         List<OfficeAssignment> OfficeAssignments { get; set; }
-         List<OfficeAssignment> GetOfficeAssignments(int id);
+        string GetOfficeAssignment();
+        List<OfficeAssignment> GetOfficeAssignments(int id);
+        string UpdateOfficeAssignment(AddOfficeAssignment officeAssignment, int id);
+        string AddOfficeAssignment(AddOfficeAssignment officeAssignment);
     }
 }
